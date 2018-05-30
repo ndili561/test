@@ -18,8 +18,12 @@ namespace ContosoUniversity.DAL
 
         public override void ScalarExecuting(DbCommand command, DbCommandInterceptionContext<object> interceptionContext)
         {
+
+
             base.ScalarExecuting(command, interceptionContext);
             _stopwatch.Restart();
+
+
         }
 
         public override void ScalarExecuted(DbCommand command, DbCommandInterceptionContext<object> interceptionContext)
