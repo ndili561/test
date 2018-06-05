@@ -31,6 +31,9 @@ namespace ContosoUniversity.Controllers
                 .Include(d => d.Department);
             var sql = courses.ToString();
             return View(courses.ToList());
+
+
+
         }
 
         // GET: Course/Details/5
