@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props" Condition="Exists('..\..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F536614F-FCC8-4477-A695-87B573C9FDA5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Incomm.Allocations.DTO</RootNamespace>
+    <AssemblyName>Incomm.Allocations.DTO</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Test-Internal|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Test-Internal\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'TST-INT-API|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\TST-INT-API\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'PRD-INT-API|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\PRD-INT-API\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'TST-INT-API2|AnyCPU'">
+    <OutputPath>bin\TST-INT-API2\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="InCoreLib.Helpers, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Incommunities.Core.Helpers.2.0.0\lib\net452\InCoreLib.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActionCategoryDTO.cs" />
+    <Compile Include="ActionResponsibilityDTO.cs" />
+    <Compile Include="ActionTypeDTO.cs" />
+    <Compile Include="AlertDTO.cs" />
+    <Compile Include="AlertViewModel.cs" />
+    <Compile Include="Audit\AuditLogDetailDto.cs" />
+    <Compile Include="Audit\AuditLogDto.cs" />
+    <Compile Include="Audit\AuditLogViewModel.cs" />
+    <Compile Include="BaseObject.cs" />
+    <Compile Include="ContactByDTO.cs" />
+    <Compile Include="ContactDto.cs" />
+    <Compile Include="CRM\AddressDto.cs" />
+    <Compile Include="CRM\AddressTypeDto.cs" />
+    <Compile Include="CRM\BaseDto.cs" />
+    <Compile Include="CRM\BaseLookupDto.cs" />
+    <Compile Include="CRM\ContactByOption.cs" />
+    <Compile Include="CRM\CRMLookup.cs" />
+    <Compile Include="CRM\EthnicityDto.cs" />
+    <Compile Include="CRM\GenderDto.cs" />
+    <Compile Include="CRM\LanguageDto.cs" />
+    <Compile Include="CRM\Lookup.cs" />
+    <Compile Include="CRM\NationalityTypeDto.cs" />
+    <Compile Include="CRM\PersonAddressDto.cs" />
+    <Compile Include="CRM\PersonApplicationLinkDto.cs" />
+    <Compile Include="CRM\PersonContactDetailDto.cs" />
+    <Compile Include="CRM\PersonDto.cs" />
+    <Compile Include="CRM\TitleDto.cs" />
+    <Compile Include="CustomerViewModel.cs" />
+    <Compile Include="EndOfServiceAlertModel.cs" />
+    <Compile Include="EntityPager.cs" />
+    <Compile Include="Enum\PropertyInterestStatus.cs" />
+    <Compile Include="GenderDto.cs" />
+    <Compile Include="HOAAnswerTypeDTO.cs" />
+    <Compile Include="HOAApproachReasonDTO.cs" />
+    <Compile Include="HOACaseNoteDTO.cs" />
+    <Compile Include="HOACaseNoteTypeDTO.cs" />
+    <Compile Include="HOAContactTypeDTO.cs" />
+    <Compile Include="HOAEligibilityRightsDTO.cs" />
+    <Compile Include="HOAEthnicityDTO.cs" />
+    <Compile Include="HOAExclusionDTO.cs" />
+    <Compile Include="HOANationalityTypeDTO.cs" />
+    <Compile Include="HOAQuestionAnswerDTO.cs" />
+    <Compile Include="HOAssessmentDTO.cs" />
+    <Compile Include="HOAUserAdminDTO.cs" />
+    <Compile Include="HostelDTO.cs" />
+    <Compile Include="HostelViewModel.cs" />
+    <Compile Include="HRSCustomerDTO.cs" />
+    <Compile Include="HRSMatchHistoryDTO.cs" />
+    <Compile Include="HRSPlacementDTO.cs" />
+    <Compile Include="HRSPlacementMatchedForCustomerDTO.cs" />
+    <Compile Include="HRSPlacementViewModel.cs" />
+    <Compile Include="HRSProviderDTO.cs" />
+    <Compile Include="HRSProviderViewModel.cs" />
+    <Compile Include="HRSQuestionAnswerDTO.cs" />
+    <Compile Include="HRSQuestionsAndAnswers.cs" />
+    <Compile Include="IH\Expenditure\AuditVblExpenditureDetailsDTO.cs" />
+    <Compile Include="IH\Expenditure\ExpenditureDetailDTO.cs" />
+    <Compile Include="IH\Expenditure\ExpenditureTypeDTO.cs" />
+    <Compile Include="IH\Income\AuditIncomeDetailDTO.cs" />
+    <Compile Include="IH\Income\IncomeDetailDTO.cs" />
+    <Compile Include="IH\Income\IncomeFrequencyDTO.cs" />
+    <Compile Include="IH\Income\IncomeTypeDTO.cs" />
+    <Compile Include="IH\SuitabilityNote\SuitabilityNoteDTO.cs" />
+    <Compile Include="IH\SuitabilityNote\SuitabilityNoteTypeDTO.cs" />
+    <Compile Include="lstQuestionDTO.cs" />
+    <Compile Include="MutualExchangeDTO.cs" />
+    <Compile Include="OdataResult.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RiskCategoryDTO.cs" />
+    <Compile Include="RiskThemeDTO.cs" />
+    <Compile Include="SearchContactDto.cs" />
+    <Compile Include="SearchPropertyDTO.cs" />
+    <Compile Include="ServiceTypeDTO.cs" />
+    <Compile Include="SuitabilityCheckActionDTO.cs" />
+    <Compile Include="SuitabilityCheckRiskDTO.cs" />
+    <Compile Include="SupportTypeDTO.cs" />
+    <Compile Include="tblCaseNoteDTO.cs" />
+    <Compile Include="TitleDto.cs" />
+    <Compile Include="TransferCheckDto.cs" />
+    <Compile Include="tsubHOAEventDTO.cs" />
+    <Compile Include="User\AuthenticationUser.cs" />
+    <Compile Include="User\HRSRoles.cs" />
+    <Compile Include="User\SingleValueArrayConverter.cs" />
+    <Compile Include="User\UserClaim.cs" />
+    <Compile Include="CRMVBLApplicationDTO.cs" />
+    <Compile Include="VBLApplicationSummaryDTO.cs" />
+    <Compile Include="CRMVBLContactDTO.cs" />
+    <Compile Include="CRMVBLCustomerInterestDTO.cs" />
+    <Compile Include="VBLExpenditureDetailsDTO.cs" />
+    <Compile Include="VBLIncommunitiesRelationshipDTO.cs" />
+    <Compile Include="VBLNoteDTO.cs" />
+    <Compile Include="VBLPropertyAddressDTO.cs" />
+    <Compile Include="VBLPropertyNeighbourhoodDTO.cs" />
+    <Compile Include="VBLPropertyPostcodeDTO.cs" />
+    <Compile Include="VBLPropertyStockDTO.cs" />
+    <Compile Include="VBLAddressDTO.cs" />
+    <Compile Include="VBLApplicationDTO.cs" />
+    <Compile Include="VBLContactByDetails.cs" />
+    <Compile Include="VBLContactDTO.cs" />
+    <Compile Include="VBLCustomerInterestDTO.cs" />
+    <Compile Include="VBLDisabilityTypeDTO.cs" />
+    <Compile Include="VBLDocumentDTO.cs" />
+    <Compile Include="VBLIncomeDetailsDTO.cs" />
+    <Compile Include="VBLIncommunitiesRelationshipTypeDTO.cs" />
+    <Compile Include="VBLMutualExchagePropertyDetailDTO.cs" />
+    <Compile Include="VBLPropertyShopDTO.cs" />
+    <Compile Include="VBLPropertyWardDTO.cs" />
+    <Compile Include="VBLRequestedPropertymatchDetailDTO.cs" />
+    <Compile Include="VBLRequiredSupportDetailDTO.cs" />
+    <Compile Include="VBLSupportDetailsDTO.cs" />
+    <Compile Include="VBLSupportTypeDTO.cs" />
+    <Compile Include="VBLTenancySearchDTO.cs" />
+    <Compile Include="VBLWharAreMyChancesDTO.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\InCoreLib.Domain\InCoreLib.Domain.csproj">
+      <Project>{f85f7378-d4d9-47d3-914d-820fab476403}</Project>
+      <Name>InCoreLib.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

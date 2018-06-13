@@ -1,0 +1,552 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8DFFAA3D-23E8-4905-9E39-283876662516}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Incomm.Allocations.DAL</RootNamespace>
+    <AssemblyName>Incomm.Allocations.DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Test|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Live|AnyCPU'">
+    <OutputPath>bin\Live\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Test-Internal|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Test-Internal\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'TST-INT-API|AnyCPU'">
+    <OutputPath>bin\TST-INT-API\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'PRD-INT-API|AnyCPU'">
+    <OutputPath>bin\PRD-INT-API\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'TST-INT-API2|AnyCPU'">
+    <OutputPath>bin\TST-INT-API2\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AllocationsContext.cs" />
+    <Compile Include="IUnitOfWork.cs" />
+    <Compile Include="Migrations\201603241727255_InitialCreate.cs" />
+    <Compile Include="Migrations\201603241727255_InitialCreate.Designer.cs">
+      <DependentUpon>201603241727255_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201603241731179_HRS_Entities_Added.cs" />
+    <Compile Include="Migrations\201603241731179_HRS_Entities_Added.Designer.cs">
+      <DependentUpon>201603241731179_HRS_Entities_Added.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201606281306218_VBLEntityAdded.cs" />
+    <Compile Include="Migrations\201606281306218_VBLEntityAdded.Designer.cs">
+      <DependentUpon>201606281306218_VBLEntityAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201606290725539_PropertyPreference_Changes.cs" />
+    <Compile Include="Migrations\201606290725539_PropertyPreference_Changes.Designer.cs">
+      <DependentUpon>201606290725539_PropertyPreference_Changes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201607060859530_VBLPropertyAddressUpdated.cs" />
+    <Compile Include="Migrations\201607060859530_VBLPropertyAddressUpdated.Designer.cs">
+      <DependentUpon>201607060859530_VBLPropertyAddressUpdated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201607080859002_MoveOnPlacements.cs" />
+    <Compile Include="Migrations\201607080859002_MoveOnPlacements.Designer.cs">
+      <DependentUpon>201607080859002_MoveOnPlacements.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201607191324042_VblReceivingSupportDetail.cs" />
+    <Compile Include="Migrations\201607191324042_VblReceivingSupportDetail.Designer.cs">
+      <DependentUpon>201607191324042_VblReceivingSupportDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201607260805547_IsCurrentAddedInVBLRequestedPropertyPrefferedNeighbourhood.cs" />
+    <Compile Include="Migrations\201607260805547_IsCurrentAddedInVBLRequestedPropertyPrefferedNeighbourhood.Designer.cs">
+      <DependentUpon>201607260805547_IsCurrentAddedInVBLRequestedPropertyPrefferedNeighbourhood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608111228281_CreateExpenditureRelatedTables.cs" />
+    <Compile Include="Migrations\201608111228281_CreateExpenditureRelatedTables.Designer.cs">
+      <DependentUpon>201608111228281_CreateExpenditureRelatedTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608241534533_PropertyNeighbourhoodsRemoved.cs" />
+    <Compile Include="Migrations\201608241534533_PropertyNeighbourhoodsRemoved.Designer.cs">
+      <DependentUpon>201608241534533_PropertyNeighbourhoodsRemoved.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608301051262_PropertyCodeAndCanReconsiderAddedInApplicationHistory.cs" />
+    <Compile Include="Migrations\201608301051262_PropertyCodeAndCanReconsiderAddedInApplicationHistory.Designer.cs">
+      <DependentUpon>201608301051262_PropertyCodeAndCanReconsiderAddedInApplicationHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608301339185_VBLNoteAdded.cs" />
+    <Compile Include="Migrations\201608301339185_VBLNoteAdded.Designer.cs">
+      <DependentUpon>201608301339185_VBLNoteAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609091226400_AddedActiveToHostel.cs" />
+    <Compile Include="Migrations\201609091226400_AddedActiveToHostel.Designer.cs">
+      <DependentUpon>201609091226400_AddedActiveToHostel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609141555278_ClaimingHosingBenefitsAdded.cs" />
+    <Compile Include="Migrations\201609141555278_ClaimingHosingBenefitsAdded.Designer.cs">
+      <DependentUpon>201609141555278_ClaimingHosingBenefitsAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609151506330_VBLCustomerInterestRelationshipUpdated.cs" />
+    <Compile Include="Migrations\201609151506330_VBLCustomerInterestRelationshipUpdated.Designer.cs">
+      <DependentUpon>201609151506330_VBLCustomerInterestRelationshipUpdated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609170833573_ApplicationAndAddressRemoved.cs" />
+    <Compile Include="Migrations\201609170833573_ApplicationAndAddressRemoved.Designer.cs">
+      <DependentUpon>201609170833573_ApplicationAndAddressRemoved.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609170836580_ApplicationAndAddressUpdated.cs" />
+    <Compile Include="Migrations\201609170836580_ApplicationAndAddressUpdated.Designer.cs">
+      <DependentUpon>201609170836580_ApplicationAndAddressUpdated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609190720584_LandlordIdAddedInVBLCustomerInterest.cs" />
+    <Compile Include="Migrations\201609190720584_LandlordIdAddedInVBLCustomerInterest.Designer.cs">
+      <DependentUpon>201609190720584_LandlordIdAddedInVBLCustomerInterest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609191452435_ApplicationClose_And_NotInterestedReasons.cs" />
+    <Compile Include="Migrations\201609191452435_ApplicationClose_And_NotInterestedReasons.Designer.cs">
+      <DependentUpon>201609191452435_ApplicationClose_And_NotInterestedReasons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609201128118_PropertyCodeAddedInAddress.cs" />
+    <Compile Include="Migrations\201609201128118_PropertyCodeAddedInAddress.Designer.cs">
+      <DependentUpon>201609201128118_PropertyCodeAddedInAddress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609201319389_ApplicationStatusReasonIdAdded1.cs" />
+    <Compile Include="Migrations\201609201319389_ApplicationStatusReasonIdAdded1.Designer.cs">
+      <DependentUpon>201609201319389_ApplicationStatusReasonIdAdded1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609211000446_HRSMatchHistoryUpdated.cs" />
+    <Compile Include="Migrations\201609211000446_HRSMatchHistoryUpdated.Designer.cs">
+      <DependentUpon>201609211000446_HRSMatchHistoryUpdated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609211338200_notinterestedreasonid_added_to_CI.cs" />
+    <Compile Include="Migrations\201609211338200_notinterestedreasonid_added_to_CI.Designer.cs">
+      <DependentUpon>201609211338200_notinterestedreasonid_added_to_CI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609221214305_CreatedByAdded.cs" />
+    <Compile Include="Migrations\201609221214305_CreatedByAdded.Designer.cs">
+      <DependentUpon>201609221214305_CreatedByAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609231034365_StoredProcedureAdded.cs" />
+    <Compile Include="Migrations\201609231034365_StoredProcedureAdded.Designer.cs">
+      <DependentUpon>201609231034365_StoredProcedureAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609280658475_CustomerInterestLookupAdded.cs" />
+    <Compile Include="Migrations\201609280658475_CustomerInterestLookupAdded.Designer.cs">
+      <DependentUpon>201609280658475_CustomerInterestLookupAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609281501108_LandlordCodeAdded.cs" />
+    <Compile Include="Migrations\201609281501108_LandlordCodeAdded.Designer.cs">
+      <DependentUpon>201609281501108_LandlordCodeAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610100803206_RiskAndActionTables.cs" />
+    <Compile Include="Migrations\201610100803206_RiskAndActionTables.Designer.cs">
+      <DependentUpon>201610100803206_RiskAndActionTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610100805231_RiskAndActionTableData.cs" />
+    <Compile Include="Migrations\201610100805231_RiskAndActionTableData.Designer.cs">
+      <DependentUpon>201610100805231_RiskAndActionTableData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610181052085_CreateSuitabilityNotesTables.cs" />
+    <Compile Include="Migrations\201610181052085_CreateSuitabilityNotesTables.Designer.cs">
+      <DependentUpon>201610181052085_CreateSuitabilityNotesTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610181116068_SeedSuitabilityNoteTypesTable.cs" />
+    <Compile Include="Migrations\201610181116068_SeedSuitabilityNoteTypesTable.Designer.cs">
+      <DependentUpon>201610181116068_SeedSuitabilityNoteTypesTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610191456552_SuitabiltyCheckActionLoggedDateAndNotesColumns.cs" />
+    <Compile Include="Migrations\201610191456552_SuitabiltyCheckActionLoggedDateAndNotesColumns.Designer.cs">
+      <DependentUpon>201610191456552_SuitabiltyCheckActionLoggedDateAndNotesColumns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610261224469_AddRiskAndActionsLoggingColumns.cs" />
+    <Compile Include="Migrations\201610261224469_AddRiskAndActionsLoggingColumns.Designer.cs">
+      <DependentUpon>201610261224469_AddRiskAndActionsLoggingColumns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611141451422_AddVblIncommunitiesRelationshipTable.cs" />
+    <Compile Include="Migrations\201611141451422_AddVblIncommunitiesRelationshipTable.Designer.cs">
+      <DependentUpon>201611141451422_AddVblIncommunitiesRelationshipTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611141511423_MigrateIncommunitiesRelationshipData.cs" />
+    <Compile Include="Migrations\201611141511423_MigrateIncommunitiesRelationshipData.Designer.cs">
+      <DependentUpon>201611141511423_MigrateIncommunitiesRelationshipData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611151742504_AddHRSMatchHistoryNotes.cs" />
+    <Compile Include="Migrations\201611151742504_AddHRSMatchHistoryNotes.Designer.cs">
+      <DependentUpon>201611151742504_AddHRSMatchHistoryNotes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611181153219_MergeMigration.cs" />
+    <Compile Include="Migrations\201611181153219_MergeMigration.Designer.cs">
+      <DependentUpon>201611181153219_MergeMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612191342020_SetHousingBenefitToNullableType.cs" />
+    <Compile Include="Migrations\201612191342020_SetHousingBenefitToNullableType.Designer.cs">
+      <DependentUpon>201612191342020_SetHousingBenefitToNullableType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701231444365_DuplicateLevelOfNeedIdRemoved.cs" />
+    <Compile Include="Migrations\201701231444365_DuplicateLevelOfNeedIdRemoved.Designer.cs">
+      <DependentUpon>201701231444365_DuplicateLevelOfNeedIdRemoved.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701270749144_FixMissingMigrationsFromDevInEFBranch.cs" />
+    <Compile Include="Migrations\201701270749144_FixMissingMigrationsFromDevInEFBranch.Designer.cs">
+      <DependentUpon>201701270749144_FixMissingMigrationsFromDevInEFBranch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201702100722552_FixActionCategoryAffordablilitySpellingMistake.cs" />
+    <Compile Include="Migrations\201702100722552_FixActionCategoryAffordablilitySpellingMistake.Designer.cs">
+      <DependentUpon>201702100722552_FixActionCategoryAffordablilitySpellingMistake.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201702141532383_RemoveDuplicateRiskCategory.cs" />
+    <Compile Include="Migrations\201702141532383_RemoveDuplicateRiskCategory.Designer.cs">
+      <DependentUpon>201702141532383_RemoveDuplicateRiskCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201702221412466_MigrateCustomerNotesToSuitabilityNotes.cs" />
+    <Compile Include="Migrations\201702221412466_MigrateCustomerNotesToSuitabilityNotes.Designer.cs">
+      <DependentUpon>201702221412466_MigrateCustomerNotesToSuitabilityNotes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703090759011_UpdateExpenditureAuditTable.cs" />
+    <Compile Include="Migrations\201703090759011_UpdateExpenditureAuditTable.Designer.cs">
+      <DependentUpon>201703090759011_UpdateExpenditureAuditTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706011213291_baseobjectfix.cs" />
+    <Compile Include="Migrations\201706011213291_baseobjectfix.Designer.cs">
+      <DependentUpon>201706011213291_baseobjectfix.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709250916148_CreateTransferCheckTable.cs" />
+    <Compile Include="Migrations\201709250916148_CreateTransferCheckTable.Designer.cs">
+      <DependentUpon>201709250916148_CreateTransferCheckTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804040851572_SearchContactView.cs" />
+    <Compile Include="Migrations\201804040851572_SearchContactView.Designer.cs">
+      <DependentUpon>201804040851572_SearchContactView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806011014118_RemoveContactPersonData.cs" />
+    <Compile Include="Migrations\201806011014118_RemoveContactPersonData.Designer.cs">
+      <DependentUpon>201806011014118_RemoveContactPersonData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Migrations\CreateTableForEnum.cs" />
+    <Compile Include="Migrations\Files.cs" />
+    <Compile Include="Migrations\SQLScriptsHelper.cs" />
+    <Compile Include="Migrations\SQL\CloseExpiredApplications.cs" />
+    <Compile Include="Migrations\SQL\FixActionCategoryAffordabilitySpellingMistake.cs" />
+    <Compile Include="Migrations\SQL\RemoveDuplicateCRMData.cs" />
+    <Compile Include="Migrations\SQL\SearchContactView.cs" />
+    <Compile Include="Migrations\SQL\MutualExchangeNotInterestedFromOtherCustomer.cs" />
+    <Compile Include="Migrations\SQL\MutualExchangeAccepted.cs" />
+    <Compile Include="Migrations\SQL\CreatetrVBLExpenditureDetailsTrigger.cs" />
+    <Compile Include="Migrations\SQL\CreateHRSMatchHistoryTrigger.cs" />
+    <Compile Include="Migrations\SQL\CreatetrVBLIncomeDetailsTrigger.cs" />
+    <Compile Include="Migrations\SQL\ExpenditureTypes.cs" />
+    <Compile Include="Migrations\SQL\fnSplitString.cs" />
+    <Compile Include="Migrations\SQL\GetHOAQuestionsAndAnswers.cs" />
+    <Compile Include="Migrations\SQL\GetPropertyDetailsByLandlordIdsAndPropertyCodes.cs" />
+    <Compile Include="Migrations\SQL\CreateSuitabilityCheckTask.cs" />
+    <Compile Include="Migrations\SQL\GetVoidPropertyAvailableForRent.cs" />
+    <Compile Include="Migrations\SQL\GetPropertyImages.cs" />
+    <Compile Include="Migrations\SQL\InsertActionAndRiskLookupData.cs" />
+    <Compile Include="Migrations\SQL\PropertyMatchForApplicationId.cs" />
+    <Compile Include="Migrations\SQL\RemoveDuplicateRiskCategory.cs" />
+    <Compile Include="Migrations\SQL\VBLPropertyShop.cs" />
+    <Compile Include="Migrations\SQL\VBLPropertyShopImages.cs" />
+    <Compile Include="Migrations\SQL\GetPropertyDetail.cs" />
+    <Compile Include="Migrations\SQL\Alter_PropertyMatchForApplicationId.cs" />
+    <Compile Include="Migrations\SQL\VBLTenancySearch.cs" />
+    <Compile Include="Migrations\SQL\HRSAlertView.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnitOfWork.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DefaultData\099.MigrateData.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603241727255_InitialCreate.resx">
+      <DependentUpon>201603241727255_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603241731179_HRS_Entities_Added.resx">
+      <DependentUpon>201603241731179_HRS_Entities_Added.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606281306218_VBLEntityAdded.resx">
+      <DependentUpon>201606281306218_VBLEntityAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606290725539_PropertyPreference_Changes.resx">
+      <DependentUpon>201606290725539_PropertyPreference_Changes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607060859530_VBLPropertyAddressUpdated.resx">
+      <DependentUpon>201607060859530_VBLPropertyAddressUpdated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607080859002_MoveOnPlacements.resx">
+      <DependentUpon>201607080859002_MoveOnPlacements.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607191324042_VblReceivingSupportDetail.resx">
+      <DependentUpon>201607191324042_VblReceivingSupportDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607260805547_IsCurrentAddedInVBLRequestedPropertyPrefferedNeighbourhood.resx">
+      <DependentUpon>201607260805547_IsCurrentAddedInVBLRequestedPropertyPrefferedNeighbourhood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608111228281_CreateExpenditureRelatedTables.resx">
+      <DependentUpon>201608111228281_CreateExpenditureRelatedTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608241534533_PropertyNeighbourhoodsRemoved.resx">
+      <DependentUpon>201608241534533_PropertyNeighbourhoodsRemoved.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608301051262_PropertyCodeAndCanReconsiderAddedInApplicationHistory.resx">
+      <DependentUpon>201608301051262_PropertyCodeAndCanReconsiderAddedInApplicationHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608301339185_VBLNoteAdded.resx">
+      <DependentUpon>201608301339185_VBLNoteAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609091226400_AddedActiveToHostel.resx">
+      <DependentUpon>201609091226400_AddedActiveToHostel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609141555278_ClaimingHosingBenefitsAdded.resx">
+      <DependentUpon>201609141555278_ClaimingHosingBenefitsAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609151506330_VBLCustomerInterestRelationshipUpdated.resx">
+      <DependentUpon>201609151506330_VBLCustomerInterestRelationshipUpdated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609170833573_ApplicationAndAddressRemoved.resx">
+      <DependentUpon>201609170833573_ApplicationAndAddressRemoved.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609170836580_ApplicationAndAddressUpdated.resx">
+      <DependentUpon>201609170836580_ApplicationAndAddressUpdated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609190720584_LandlordIdAddedInVBLCustomerInterest.resx">
+      <DependentUpon>201609190720584_LandlordIdAddedInVBLCustomerInterest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609191452435_ApplicationClose_And_NotInterestedReasons.resx">
+      <DependentUpon>201609191452435_ApplicationClose_And_NotInterestedReasons.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609201128118_PropertyCodeAddedInAddress.resx">
+      <DependentUpon>201609201128118_PropertyCodeAddedInAddress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609201319389_ApplicationStatusReasonIdAdded1.resx">
+      <DependentUpon>201609201319389_ApplicationStatusReasonIdAdded1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609211000446_HRSMatchHistoryUpdated.resx">
+      <DependentUpon>201609211000446_HRSMatchHistoryUpdated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609211338200_notinterestedreasonid_added_to_CI.resx">
+      <DependentUpon>201609211338200_notinterestedreasonid_added_to_CI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609221214305_CreatedByAdded.resx">
+      <DependentUpon>201609221214305_CreatedByAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609231034365_StoredProcedureAdded.resx">
+      <DependentUpon>201609231034365_StoredProcedureAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609280658475_CustomerInterestLookupAdded.resx">
+      <DependentUpon>201609280658475_CustomerInterestLookupAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609281501108_LandlordCodeAdded.resx">
+      <DependentUpon>201609281501108_LandlordCodeAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610100803206_RiskAndActionTables.resx">
+      <DependentUpon>201610100803206_RiskAndActionTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610100805231_RiskAndActionTableData.resx">
+      <DependentUpon>201610100805231_RiskAndActionTableData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610181052085_CreateSuitabilityNotesTables.resx">
+      <DependentUpon>201610181052085_CreateSuitabilityNotesTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610181116068_SeedSuitabilityNoteTypesTable.resx">
+      <DependentUpon>201610181116068_SeedSuitabilityNoteTypesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610191456552_SuitabiltyCheckActionLoggedDateAndNotesColumns.resx">
+      <DependentUpon>201610191456552_SuitabiltyCheckActionLoggedDateAndNotesColumns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610261224469_AddRiskAndActionsLoggingColumns.resx">
+      <DependentUpon>201610261224469_AddRiskAndActionsLoggingColumns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611141451422_AddVblIncommunitiesRelationshipTable.resx">
+      <DependentUpon>201611141451422_AddVblIncommunitiesRelationshipTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611141511423_MigrateIncommunitiesRelationshipData.resx">
+      <DependentUpon>201611141511423_MigrateIncommunitiesRelationshipData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611151742504_AddHRSMatchHistoryNotes.resx">
+      <DependentUpon>201611151742504_AddHRSMatchHistoryNotes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611181153219_MergeMigration.resx">
+      <DependentUpon>201611181153219_MergeMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612191342020_SetHousingBenefitToNullableType.resx">
+      <DependentUpon>201612191342020_SetHousingBenefitToNullableType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701231444365_DuplicateLevelOfNeedIdRemoved.resx">
+      <DependentUpon>201701231444365_DuplicateLevelOfNeedIdRemoved.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701270749144_FixMissingMigrationsFromDevInEFBranch.resx">
+      <DependentUpon>201701270749144_FixMissingMigrationsFromDevInEFBranch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702100722552_FixActionCategoryAffordablilitySpellingMistake.resx">
+      <DependentUpon>201702100722552_FixActionCategoryAffordablilitySpellingMistake.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702141532383_RemoveDuplicateRiskCategory.resx">
+      <DependentUpon>201702141532383_RemoveDuplicateRiskCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702221412466_MigrateCustomerNotesToSuitabilityNotes.resx">
+      <DependentUpon>201702221412466_MigrateCustomerNotesToSuitabilityNotes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703090759011_UpdateExpenditureAuditTable.resx">
+      <DependentUpon>201703090759011_UpdateExpenditureAuditTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706011213291_baseobjectfix.resx">
+      <DependentUpon>201706011213291_baseobjectfix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709250916148_CreateTransferCheckTable.resx">
+      <DependentUpon>201709250916148_CreateTransferCheckTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804040851572_SearchContactView.resx">
+      <DependentUpon>201804040851572_SearchContactView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806011014118_RemoveContactPersonData.resx">
+      <DependentUpon>201806011014118_RemoveContactPersonData.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DefaultData\000.DefaultData.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Incomm.Allocations.DTO\Incomm.Allocations.DTO.csproj">
+      <Project>{F536614F-FCC8-4477-A695-87B573C9FDA5}</Project>
+      <Name>Incomm.Allocations.DTO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\InCoreLib.Domain\InCoreLib.Domain.csproj">
+      <Project>{f85f7378-d4d9-47d3-914d-820fab476403}</Project>
+      <Name>InCoreLib.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DefaultData\StoredProcedure\CreateSuitabilityCheckTask.sql" />
+    <EmbeddedResource Include="DefaultData\StoredProcedure\PropertyMatchForApplicationId.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultData\StoredProcedure\GetPropertyDetail.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultData\StoredProcedure\GetPropertyDetailsByLandlordIdsAndPropertyCodes.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultData\StoredProcedure\fnSplitString.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultData\StoredProcedure\GetPropertyImage.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DefaultData\StoredProcedure\GetVoidPropertyAvailableForRent.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DefaultData\StoredProcedure\CloseExpiredApplication.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DefaultData\StoredProcedure\Revert_CloseExpiredApplication.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DefaultData\StoredProcedure\MutualExchangeNotInterestedFromOtherCustomer.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DefaultData\StoredProcedure\MutualExchangeAccepted.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DefaultData\999.TestableContactDetails - DO NOT RUN ON LIVE.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,154 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.10
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{312AD0F9-B377-49F9-BA90-976996D40912}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CoreLib", "CoreLib", "{63B250AD-9CC2-482F-938D-C3B70087C694}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AllocationsAPI.WebAPI", "AllocationAPI.WebAPI\AllocationsAPI.WebAPI.csproj", "{0D8E7422-8EAB-401A-B666-85C8D726A0F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Incomm.Allocations.DTO", "InCoreLib\Incomm.Allocations.DTO\Incomm.Allocations.DTO.csproj", "{F536614F-FCC8-4477-A695-87B573C9FDA5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Incomm.Allocations.BLL", "InCoreLib\Incomm.Allocations.BLL\Incomm.Allocations.BLL.csproj", "{43800AB4-C4DB-4F5B-BCF6-3CF6127C559A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Incomm.Allocations.DAL", "InCoreLib\Incomm.Allocations.DAL\Incomm.Allocations.DAL.csproj", "{8DFFAA3D-23E8-4905-9E39-283876662516}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTest", "UnitTest", "{26E5C13F-304B-45EB-AF6E-0F31FD53DD9E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Incomm.Allocations.BLL.Test", "UnitTest\Incomm.Allocations.BLL.Test\Incomm.Allocations.BLL.Test.csproj", "{71D3FE62-920B-42EF-9FE3-07DC37B7E4F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InCoreLib.Domain", "InCoreLib\InCoreLib.Domain\InCoreLib.Domain.csproj", "{F85F7378-D4D9-47D3-914D-820FAB476403}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileUploader", "FileUploader\FileUploader.csproj", "{45C1C23E-8471-4F5D-9D3A-4E221E6C7AEF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Dev|Any CPU = Dev|Any CPU
+		PRD-INT-API|Any CPU = PRD-INT-API|Any CPU
+		Release|Any CPU = Release|Any CPU
+		TST-INT-API|Any CPU = TST-INT-API|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0D8E7422-8EAB-401A-B666-85C8D726A0F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D8E7422-8EAB-401A-B666-85C8D726A0F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D8E7422-8EAB-401A-B666-85C8D726A0F8}.Dev|Any CPU.ActiveCfg = Dev|Any CPU
+		{0D8E7422-8EAB-401A-B666-85C8D726A0F8}.Dev|Any CPU.Build.0 = Dev|Any CPU
+		{0D8E7422-8EAB-401A-B666-85C8D726A0F8}.PRD-INT-API|Any CPU.ActiveCfg = PRD-INT-API|Any CPU
+		{0D8E7422-8EAB-401A-B666-85C8D726A0F8}.PRD-INT-API|Any CPU.Build.0 = PRD-INT-API|Any CPU
+		{0D8E7422-8EAB-401A-B666-85C8D726A0F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D8E7422-8EAB-401A-B666-85C8D726A0F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D8E7422-8EAB-401A-B666-85C8D726A0F8}.TST-INT-API|Any CPU.ActiveCfg = TST-INT-API|Any CPU
+		{0D8E7422-8EAB-401A-B666-85C8D726A0F8}.TST-INT-API|Any CPU.Build.0 = TST-INT-API|Any CPU
+		{F536614F-FCC8-4477-A695-87B573C9FDA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F536614F-FCC8-4477-A695-87B573C9FDA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F536614F-FCC8-4477-A695-87B573C9FDA5}.Dev|Any CPU.ActiveCfg = Debug|Any CPU
+		{F536614F-FCC8-4477-A695-87B573C9FDA5}.Dev|Any CPU.Build.0 = Debug|Any CPU
+		{F536614F-FCC8-4477-A695-87B573C9FDA5}.PRD-INT-API|Any CPU.ActiveCfg = PRD-INT-API|Any CPU
+		{F536614F-FCC8-4477-A695-87B573C9FDA5}.PRD-INT-API|Any CPU.Build.0 = PRD-INT-API|Any CPU
+		{F536614F-FCC8-4477-A695-87B573C9FDA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F536614F-FCC8-4477-A695-87B573C9FDA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F536614F-FCC8-4477-A695-87B573C9FDA5}.TST-INT-API|Any CPU.ActiveCfg = TST-INT-API|Any CPU
+		{F536614F-FCC8-4477-A695-87B573C9FDA5}.TST-INT-API|Any CPU.Build.0 = TST-INT-API|Any CPU
+		{43800AB4-C4DB-4F5B-BCF6-3CF6127C559A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43800AB4-C4DB-4F5B-BCF6-3CF6127C559A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43800AB4-C4DB-4F5B-BCF6-3CF6127C559A}.Dev|Any CPU.ActiveCfg = Debug|Any CPU
+		{43800AB4-C4DB-4F5B-BCF6-3CF6127C559A}.Dev|Any CPU.Build.0 = Debug|Any CPU
+		{43800AB4-C4DB-4F5B-BCF6-3CF6127C559A}.PRD-INT-API|Any CPU.ActiveCfg = PRD-INT-API|Any CPU
+		{43800AB4-C4DB-4F5B-BCF6-3CF6127C559A}.PRD-INT-API|Any CPU.Build.0 = PRD-INT-API|Any CPU
+		{43800AB4-C4DB-4F5B-BCF6-3CF6127C559A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43800AB4-C4DB-4F5B-BCF6-3CF6127C559A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43800AB4-C4DB-4F5B-BCF6-3CF6127C559A}.TST-INT-API|Any CPU.ActiveCfg = TST-INT-API|Any CPU
+		{43800AB4-C4DB-4F5B-BCF6-3CF6127C559A}.TST-INT-API|Any CPU.Build.0 = TST-INT-API|Any CPU
+		{8DFFAA3D-23E8-4905-9E39-283876662516}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DFFAA3D-23E8-4905-9E39-283876662516}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DFFAA3D-23E8-4905-9E39-283876662516}.Dev|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DFFAA3D-23E8-4905-9E39-283876662516}.Dev|Any CPU.Build.0 = Debug|Any CPU
+		{8DFFAA3D-23E8-4905-9E39-283876662516}.PRD-INT-API|Any CPU.ActiveCfg = PRD-INT-API|Any CPU
+		{8DFFAA3D-23E8-4905-9E39-283876662516}.PRD-INT-API|Any CPU.Build.0 = PRD-INT-API|Any CPU
+		{8DFFAA3D-23E8-4905-9E39-283876662516}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DFFAA3D-23E8-4905-9E39-283876662516}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DFFAA3D-23E8-4905-9E39-283876662516}.TST-INT-API|Any CPU.ActiveCfg = TST-INT-API|Any CPU
+		{8DFFAA3D-23E8-4905-9E39-283876662516}.TST-INT-API|Any CPU.Build.0 = TST-INT-API|Any CPU
+		{71D3FE62-920B-42EF-9FE3-07DC37B7E4F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71D3FE62-920B-42EF-9FE3-07DC37B7E4F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71D3FE62-920B-42EF-9FE3-07DC37B7E4F9}.Dev|Any CPU.ActiveCfg = Debug|Any CPU
+		{71D3FE62-920B-42EF-9FE3-07DC37B7E4F9}.Dev|Any CPU.Build.0 = Debug|Any CPU
+		{71D3FE62-920B-42EF-9FE3-07DC37B7E4F9}.PRD-INT-API|Any CPU.ActiveCfg = PRD-INT-API|Any CPU
+		{71D3FE62-920B-42EF-9FE3-07DC37B7E4F9}.PRD-INT-API|Any CPU.Build.0 = PRD-INT-API|Any CPU
+		{71D3FE62-920B-42EF-9FE3-07DC37B7E4F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71D3FE62-920B-42EF-9FE3-07DC37B7E4F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71D3FE62-920B-42EF-9FE3-07DC37B7E4F9}.TST-INT-API|Any CPU.ActiveCfg = TST-INT-API|Any CPU
+		{71D3FE62-920B-42EF-9FE3-07DC37B7E4F9}.TST-INT-API|Any CPU.Build.0 = TST-INT-API|Any CPU
+		{F85F7378-D4D9-47D3-914D-820FAB476403}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F85F7378-D4D9-47D3-914D-820FAB476403}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F85F7378-D4D9-47D3-914D-820FAB476403}.Dev|Any CPU.ActiveCfg = Debug|Any CPU
+		{F85F7378-D4D9-47D3-914D-820FAB476403}.Dev|Any CPU.Build.0 = Debug|Any CPU
+		{F85F7378-D4D9-47D3-914D-820FAB476403}.PRD-INT-API|Any CPU.ActiveCfg = PRD-INT-API|Any CPU
+		{F85F7378-D4D9-47D3-914D-820FAB476403}.PRD-INT-API|Any CPU.Build.0 = PRD-INT-API|Any CPU
+		{F85F7378-D4D9-47D3-914D-820FAB476403}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F85F7378-D4D9-47D3-914D-820FAB476403}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F85F7378-D4D9-47D3-914D-820FAB476403}.TST-INT-API|Any CPU.ActiveCfg = TST-INT-API|Any CPU
+		{F85F7378-D4D9-47D3-914D-820FAB476403}.TST-INT-API|Any CPU.Build.0 = TST-INT-API|Any CPU
+		{45C1C23E-8471-4F5D-9D3A-4E221E6C7AEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45C1C23E-8471-4F5D-9D3A-4E221E6C7AEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45C1C23E-8471-4F5D-9D3A-4E221E6C7AEF}.Dev|Any CPU.ActiveCfg = Debug|Any CPU
+		{45C1C23E-8471-4F5D-9D3A-4E221E6C7AEF}.Dev|Any CPU.Build.0 = Debug|Any CPU
+		{45C1C23E-8471-4F5D-9D3A-4E221E6C7AEF}.PRD-INT-API|Any CPU.ActiveCfg = Release|Any CPU
+		{45C1C23E-8471-4F5D-9D3A-4E221E6C7AEF}.PRD-INT-API|Any CPU.Build.0 = Release|Any CPU
+		{45C1C23E-8471-4F5D-9D3A-4E221E6C7AEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45C1C23E-8471-4F5D-9D3A-4E221E6C7AEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45C1C23E-8471-4F5D-9D3A-4E221E6C7AEF}.TST-INT-API|Any CPU.ActiveCfg = Release|Any CPU
+		{45C1C23E-8471-4F5D-9D3A-4E221E6C7AEF}.TST-INT-API|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0D8E7422-8EAB-401A-B666-85C8D726A0F8} = {312AD0F9-B377-49F9-BA90-976996D40912}
+		{F536614F-FCC8-4477-A695-87B573C9FDA5} = {63B250AD-9CC2-482F-938D-C3B70087C694}
+		{43800AB4-C4DB-4F5B-BCF6-3CF6127C559A} = {63B250AD-9CC2-482F-938D-C3B70087C694}
+		{8DFFAA3D-23E8-4905-9E39-283876662516} = {63B250AD-9CC2-482F-938D-C3B70087C694}
+		{71D3FE62-920B-42EF-9FE3-07DC37B7E4F9} = {26E5C13F-304B-45EB-AF6E-0F31FD53DD9E}
+		{F85F7378-D4D9-47D3-914D-820FAB476403} = {63B250AD-9CC2-482F-938D-C3B70087C694}
+		{45C1C23E-8471-4F5D-9D3A-4E221E6C7AEF} = {63B250AD-9CC2-482F-938D-C3B70087C694}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {46AF5D98-EBBF-4D62-A81C-A80C5793793E}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 8
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://svr-prdlog:8080/tfs/indev
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = AllocationAPI.WebAPI\\AllocationsAPI.WebAPI.csproj
+		SccProjectTopLevelParentUniqueName1 = AllocationsAPI.sln
+		SccProjectName1 = AllocationAPI.WebAPI
+		SccLocalPath1 = AllocationAPI.WebAPI
+		SccProjectUniqueName2 = InCoreLib\\Incomm.Allocations.DTO\\Incomm.Allocations.DTO.csproj
+		SccProjectTopLevelParentUniqueName2 = AllocationsAPI.sln
+		SccProjectName2 = InCoreLib/Incomm.Allocations.DTO
+		SccLocalPath2 = InCoreLib\\Incomm.Allocations.DTO
+		SccProjectUniqueName3 = InCoreLib\\Incomm.Allocations.BLL\\Incomm.Allocations.BLL.csproj
+		SccProjectTopLevelParentUniqueName3 = AllocationsAPI.sln
+		SccProjectName3 = InCoreLib/Incomm.Allocations.BLL
+		SccLocalPath3 = InCoreLib\\Incomm.Allocations.BLL
+		SccProjectUniqueName4 = InCoreLib\\Incomm.Allocations.DAL\\Incomm.Allocations.DAL.csproj
+		SccProjectTopLevelParentUniqueName4 = AllocationsAPI.sln
+		SccProjectName4 = InCoreLib/Incomm.Allocations.DAL
+		SccLocalPath4 = InCoreLib\\Incomm.Allocations.DAL
+		SccProjectUniqueName5 = UnitTest\\Incomm.Allocations.BLL.Test\\Incomm.Allocations.BLL.Test.csproj
+		SccProjectTopLevelParentUniqueName5 = AllocationsAPI.sln
+		SccProjectName5 = UnitTest/Incomm.Allocations.BLL.Test
+		SccLocalPath5 = UnitTest\\Incomm.Allocations.BLL.Test
+		SccProjectUniqueName6 = InCoreLib\\InCoreLib.Domain\\InCoreLib.Domain.csproj
+		SccProjectTopLevelParentUniqueName6 = AllocationsAPI.sln
+		SccProjectName6 = InCoreLib/InCoreLib.Domain
+		SccLocalPath6 = InCoreLib\\InCoreLib.Domain
+		SccProjectUniqueName7 = FileUploader\\FileUploader.csproj
+		SccProjectTopLevelParentUniqueName7 = AllocationsAPI.sln
+		SccProjectName7 = FileUploader
+		SccLocalPath7 = FileUploader
+	EndGlobalSection
+EndGlobal
